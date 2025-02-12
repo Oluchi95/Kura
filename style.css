@@ -1,0 +1,1552 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    letter-spacing: .2px;
+}
+
+.settings{
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+    top: 25%;
+    right: -200px;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    padding: 20px 10px 11px 20px;
+}
+
+.icon{
+    top: 0;
+    right: 100%;
+}
+
+.settings .fa-sharp{
+    font-size: 30px;
+    color: #000;
+    animation-name: rotation;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width:480px){
+    .settings{
+        width: 60px;
+        height: 60px;
+        z-index: 10;
+        top: 25%;
+        right: -200px;
+        background-color: #fff;
+        position: fixed;
+        right: 0;
+        padding: 20px 10px 11px 20px;    
+    }
+    
+    .icon{
+        top: 0;
+        right: 100%;
+    }
+    
+    .settings .fa-sharp{
+        font-size: 30px;
+        color: #000;
+    }
+    .smith{
+        background-image: url(Images/thinking.jpg);
+        background-size: cover;
+        background-position: bottom;
+    }
+}    
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(48, 49, 52);
+    position: fixed;
+    top: 0;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 70px;
+    height: 20px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hamburger {
+    height: 30px;
+    width: 30px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav{
+    margin-left: 470px;
+}
+
+.nav li{
+    list-style: none;
+    display: none;
+    margin-left: 30px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Poppins',sans-serif;
+    transition: all .3s ease;
+}
+
+.nav li a:hover{
+    color: rgb(255, 69, 34);
+}
+
+@media only screen and (max-width:480px){
+    header{
+        padding: 20px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    header .nav{
+        display: none;
+    }
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    background-color: rgb(48, 49, 52);
+    padding: 130px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.hero{
+    width: 45%;
+    height: auto;
+}
+
+.benard{
+    width: 60%;
+    min-height: 500px;
+    background-color: rgb(255, 69, 34);
+    border-radius: 10px;
+    position: relative;
+    transform: rotate(-6deg);
+    margin-bottom: 50px;
+    transition: all .4s ease;
+}
+
+.smith{
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 100px;
+    background-image: url(Images/thinking.jpg);
+    background-size: cover;
+    background-position: bottom;
+    transform: rotate(15deg);
+}
+
+.home .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.home .main-title h3{ 
+    color: white;
+    font-weight: 800;
+    font-size: 35px;
+    font-family: 'Poppins',sans-serif;
+    margin-top: 10px;
+}
+
+.description{
+    width: 45%;
+    height: auto;
+}
+
+.services .inner-list a{
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+.services .inner-list{
+    margin-bottom: 15px;
+}
+
+.services a:hover{
+    color: rgb(255, 69, 34);
+}
+
+.arrow{
+    fill: currentColor;
+    height: 17px;
+    width: 17px;
+    color: #fff;
+    margin-left: 10px;
+    transition: all .3s ease;
+}
+
+.services .arrow:hover{
+    transform: rotate(-40deg);
+    color: rgb(255, 69, 34);
+}
+
+.achievements ul{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.achievements ul li{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.achievements ul li h3{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 45px;
+}
+
+.achievements span{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgb(139, 146, 157);
+    margin-left: 15px;
+}
+
+.down {
+    fill: currentcolor;
+}
+
+a .down{
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    animation-name: scroll;
+    animation-timing-function: ease;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll{
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(20px);
+    }
+}
+
+@media only screen and (max-width:480px){
+    .home{
+        padding: 140px 25px 50px 30px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .down{
+        visibility: hidden;
+    }
+    .hero{
+        width: 100%;
+    }
+
+    .home .main-title h3{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .description{
+        width: 100%;
+    }
+    .benard{
+        width: 100%;
+        height: 600px;
+        visibility: visible;
+        transform: rotate(0deg);
+        background-image: url(Images/thinking.jpg);
+        background-position: center;
+        background-size: cover;
+        position: static;
+    }
+    .smith{
+        display: none;
+        transform: rotate(0deg);
+    }
+}
+
+.portfolio{
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(73, 75, 80);
+    padding: 130px;
+}
+
+.portfolio .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.portfolio .main-title h3{ 
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.gallery{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+}
+
+.galleries{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.magic{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 1.jpg);
+    background-position: center;
+    background-size: cover ;
+    position: relative;
+    margin: 15px;
+}
+
+.green{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.dandora{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.grasia{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 4.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.mercury{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 5.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.santa{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/portfolio\ 6.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 15px;
+}
+
+.galleries .overlay{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgb(73, 75, 80);
+    overflow: hidden;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.magic:hover .overlay{
+    opacity: 1;
+}
+
+.green:hover .overlay{
+    opacity: 1;
+}
+
+.dandora:hover .overlay{
+    opacity: 1;
+}
+
+.grasia:hover .overlay{
+    opacity: 1;
+}
+
+.mercury:hover .overlay{
+    opacity: 1;
+}
+
+.santa:hover .overlay{
+    opacity: 1;
+}
+
+.galleries .overlay .text span{
+    color: rgb(139, 146, 157);
+    font-family: 'Mulish' ,sans-serif;
+}
+
+.galleries .overlay .text h3{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.galleries .overlay a{
+    text-decoration: none;
+}
+
+.galleries .overlay .text{
+    padding: 345px 20px 20px 20px;
+}
+
+.galleries .overlay .text .svg {
+    fill: white;
+    bottom: 70px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(230deg);
+}
+
+.sway{
+    width: 100%;
+    height: auto;
+}
+
+.swayers{
+    width: 70%;
+    height: auto;
+    display: inline-flex;
+    margin-left: 25px;
+}
+
+.swayers span{
+    color: #fff;
+    font-size: 16px;
+    height: 22px;
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider img{
+    text-align: center;
+    color: #fff;
+}
+
+.sways{
+    width: 20%;
+    height: auto;
+    display: inline;
+    text-decoration: none;
+    padding: 30px 0 0 0;
+    margin-left: 200px;
+}
+
+.sways .right{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+}
+
+.sways .left{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg)
+}
+
+@media only screen and (max-width:480px){
+    .portfolio{
+        padding: 100px 50px;
+        height: auto;
+    }
+    .galleries{
+        width:500px;
+        height: auto;
+    }
+
+    .sway{
+        display: flex;
+        width: 100%;
+    }
+    .sways{
+        width: 100%;
+    }
+    .magic{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .green{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .dandora{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .grasia{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .mercury{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .santa{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+}
+
+.skills{
+    height: 800px;
+    width: 100%;
+    background-color: black;
+    background-image: url(Images/white-texture.png);
+    background-position: center;
+    background-repeat: repeat;
+    display: flex;
+    padding: 130px;
+}
+
+.skilled{
+    width: 50%;
+    height: 400px;
+    margin-bottom: 100px;
+}
+
+.skills .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.skills .main-title h3{ 
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.skills .text p{
+    color: rgb(139, 146, 157);
+    font-weight: 400;
+    margin-bottom: 50px;
+    font-family: 'Mulish',sans-serif;   
+    line-height: 1.5;
+}
+
+.skilled .text{
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.labels{
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+.bar{
+    background-color: rgba(255, 255, 255, 0.10);
+    width: 100%;
+    height:8px ;
+    margin-bottom: 30px;
+    animation-name: scrolled;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-duration: 2s;
+}
+
+@keyframes scrolled{
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.bars-one{
+    background-color: rgb(255, 69, 34);
+    width: 95%;
+    height: 8px;
+}
+
+.bars-two{
+    background-color: rgb(255, 69, 34);
+    width: 80%;
+    height: 8px;
+}
+
+.bars-three{
+    background-color: rgb(255, 69, 34);
+    width: 90%;
+    height: 8px;
+}
+
+.progress{
+    width: 450px;
+    height: 400px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.potrait{
+    width:500px;
+    height: 400px;
+    margin-left: 200px;
+}
+
+.potray{
+    width: 420px;
+    height: 824px;
+    background-image: url(Images/portfolio\ 2.jpg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    padding-left: 30px;
+}
+
+@media only screen and (max-width:480px){
+    .skills{
+        padding: 100px 20px 100px 30px;
+        height: auto;
+        width: 100%;
+    }
+    .skilled{
+        width: 100%;
+    }
+    .potrait{
+        visibility: hidden;
+    }
+    .progress{
+        width: 400px;
+    }
+}
+
+.timeline{
+    height: auto;
+    width: 100%;
+    background-color: rgb(73, 75, 80);
+    padding: 130px;
+}
+
+.timeline .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.timeline .main-title h3{ 
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.subtitles{
+    height: auto;
+    width: 100%;
+}
+
+.sub{
+    width: 100%;
+    height: 80px;
+    font-size: 18px;
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+}
+
+.one{
+    animation-name: fade-ups;
+    animation-duration: 0.7s;
+    padding-top: 20px;
+}
+
+@keyframes fade-ups{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.two{
+    animation-name: fade-upss;
+    animation-duration: 0.7s;
+    animation-delay: 0.2s;
+    padding-top: 20px;
+}
+    
+@keyframes fade-upss{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.three{
+    animation-name: fade-upsss;
+    animation-duration: 0.7s;
+    animation-delay: 0.4s;
+    padding-top: 20px;
+}
+    
+@keyframes fade-upsss{
+    0%{
+    opacity: 0;
+    transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.four{
+    animation-name: fade-upssss;
+    animation-duration: 0.7s;
+    animation-delay: 0.6s;
+    padding-top: 20px;
+}
+
+@keyframes fade-upssss{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.five{
+    animation-name: fade-upsssss;
+    animation-duration: 0.7s;
+    animation-delay: 0.8s;
+    padding-top: 20px;
+}
+
+@keyframes fade-upsssss{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tubs{
+    color: rgb(139, 146, 157);
+    width: 35%;
+    height: 40px;
+}
+
+.tub{
+    color: #fff;
+    width: 35%;
+    height: 40px;
+}
+
+.line{
+    width: 1095px;
+    height: 1px;
+    background-color: rgb(92, 93, 98);
+    margin-bottom: 15px;
+    animation-name: fade-upsssss;
+    animation-duration: 0.7s;
+    animation-delay: 0.8s;
+}
+
+@keyframes fade-upsssss{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width:480px){
+    .timeline{
+        padding: 100px 50px;
+        height: auto;
+    }
+    .sub{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .tubs{
+        width: 100%;
+    }
+    
+    .tub{
+        width: 100%;  
+    }
+    .line{
+        width: 400px;
+        height: 1px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+}
+
+.pricing{
+    height: auto;
+    width: 100%;
+    background-color: rgb(48, 49, 52);
+    padding: 130px;
+    display: flex;
+}
+
+.pricing .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.pricing .main-title h3{ 
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.pricing .text p{
+    color: rgb(139, 146, 157);
+    font-weight: 400;
+    font-family: 'Mulish',sans-serif;  
+    line-height: 1.5; 
+}
+
+.prices{
+    width: 45%;
+    height: auto;
+    margin-right: 80px;
+}
+
+.faith{
+    width: 45%;
+    height: auto;
+    margin-left: 150px;
+}
+
+.faith span, h3{
+    color: #fff;
+    font-size: 16px;
+}
+
+.faith span{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.fled .fa-solid, .fa-brands, .fa-sharp{
+    color: rgb(255, 69, 34);
+    margin-right: 5px;
+}
+
+.fled{
+    width: 95%;
+    height: 90px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: rgb(73, 75, 80);
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 9px 15px 20px;
+    position: relative;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pace{
+    width: 60%;
+    height: 40px;
+}
+
+.ace{
+    width: 15%;
+    height: 45px;
+}
+.ace h3{
+    margin: 0;
+}
+
+.fled:hover{
+    background-color: rgb(255, 69, 34);
+}
+
+@media only screen and (max-width:480px){
+    .pricing{
+        width: 100%;
+        display: block;
+        padding: 100px 20px 100px 30px;
+    }
+    .prices{
+        width: 100%;
+    }
+
+    .prices .text{
+        margin-bottom: 50px;
+    }
+
+    .faith{
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 30px;
+    }
+    .fled{
+        width: 95%;
+    }
+}
+
+.news{
+    height: auto;
+    width: 100%;
+    background-color: rgb(73, 75, 80);
+    padding: 130px;
+}
+
+.news .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.news .main-title h3{ 
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.grid{
+    width: 100%;
+    height: auto;
+}
+
+.grids{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.write{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/Book.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;                             
+}
+
+.seo{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/SEO.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;  
+}
+
+.bulb{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;  
+}
+
+.draw{
+    width: 330px;
+    height: 360px;
+    border-radius: 10px;
+    border: none;
+    background-image: url(Images/Drawing.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 25px;
+    margin-right: 715px;
+}
+
+.way{
+    width: 100%;
+    height: auto;
+}
+
+.ways{
+    width: 70%;
+    height: auto;
+    display: inline-flex;
+    margin-left: 25px;
+}
+
+.ways span{
+    color: #fff;
+    font-size: 16px;
+    height: 22px;
+    padding: 30px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.wayd{
+    width: 20%;
+    height: auto;
+    display: inline;
+    text-decoration: none;
+    padding: 30px 0 0 0;
+    margin-left: 200px;
+}
+
+.wayd .right{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    margin-left: 10px;
+}
+
+.wayd .left{
+    fill: white;
+    width: 20px;
+    height: 20px;
+    transform: rotate(90deg)
+}
+
+.grids .overlay{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: rgb(73, 75, 80);
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.write:hover .overlay{
+    opacity: 1;
+    overflow-y: scroll;
+    transition: 0.5s ease;
+}
+
+.seo:hover .overlay{
+    opacity: 1;
+    overflow-y: scroll;
+    transition: 0.5s ease;
+}
+
+.bulb:hover .overlay{
+    opacity: 1;
+    overflow-y: scroll;
+    transition: 0.5s ease;
+}
+
+.draw:hover .overlay{
+    opacity: 1;
+    overflow-y: scroll;
+    transition: 0.5s ease;
+}
+
+.grids .overlay .text span{
+    color: rgb(139, 146, 157);
+    font-family: 'Mulish', sans-serif;
+    margin-bottom: 7px;
+}
+.grids .overlay .text p{
+    margin-bottom: 15px;
+    color: rgb(139, 146, 157);
+    font-family: 'Mulish', sans-serif;
+    line-height: 1.5;
+}
+
+.grids .overlay .text h3{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 50px;
+}
+
+.grids .overlay .text{
+    padding: 220px 20px 20px 20px;
+}
+
+@media only screen and (max-width:480px){
+    .news{
+        padding: 100px 50px;
+    }
+    .write{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .seo{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .bulb{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .draw{
+        width: 100%;
+        height: 470px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+    .way{
+        display: flex;
+        width: 100%;
+    }
+    .ways{
+        width: 100%;
+    }
+    .wayd{
+        width: 100%;
+    }
+    .grids .overlay .text{
+        padding: 345px 20px 20px 20px;
+    }
+}
+
+.contact{
+    height: auto;
+    width: 100%;
+    background-color: rgb(48, 49, 52) ;
+    padding: 130px;
+}
+
+.contact .main-title{
+    height: auto;
+    width: 100%;
+    animation-name: fade-up;
+    animation-duration: 0.7s;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact .main-title span{
+    color: rgb(255, 69, 34);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: normal;
+}
+
+.contact .main-title h3{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.help{
+    width: 100%;
+    height: auto;
+    background-color: inherit;
+    display: flex;
+}
+
+.hold{
+    width: 100%;
+    height: auto;
+}
+
+.text p{
+    color: rgb(139, 146, 157);
+    font-weight: 400;
+    margin-bottom: 45px;
+    font-family: 'Mulish',sans-serif;
+    line-height: 1.5;
+}
+
+.short{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+}
+
+.short .inner-list{
+    margin-bottom: 15px;
+}
+
+.short span{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.short .fa-solid, .fa-regular{
+    color: rgb(255, 69, 34);
+}
+
+.fade{
+    width: 700px;
+    height: auto;
+}
+
+.field input{
+    width: 100%;
+    height: 44px;
+    margin-bottom: 30px;
+    border: 1px solid rgb(73, 75, 80);
+    background-color: transparent;
+    padding-left: 20px;
+}
+
+.fill button{
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background-color: rgb(255, 69, 34);
+    color: #fff;
+    font-size: 17px;
+}
+
+button i{
+    margin-left: 10px;
+}
+
+button i:hover{
+    transform: rotate(-40deg);
+}
+
+.fill button:hover{
+    background-color: black;
+    transition: all .3s ease;
+}
+
+::placeholder{
+    color: rgb(139, 146, 157);
+    font-weight: bold;
+}
+
+@media only screen and (max-width:480px){
+    .contact{
+        padding: 100px 20px 100px 30px;
+        width: 100%;
+    }
+    .help{
+        display: block;
+    }
+    .fade{
+        width: 100%;
+        margin-top: 60px;
+    }
+}
+
+.copyright{
+    height: auto;
+    width: 100%;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy{
+    width: 45%;
+    height: auto;
+    text-align: center;
+    animation-name: fade-up;
+    animation-duration: 0.7s;
+    margin-right: 50px;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.copyright .copy p{
+    font-family: 'Mulish',sans-serif;
+    color: #fff;
+}
+
+.copy p .fa-regular{
+    font-size: 13px;
+    color: #fff;
+}
+
+.social{
+    width: 45%;
+    height: auto;
+    text-align: center;
+    animation-name: fade-up;
+    animation-duration: 0.7s;
+    margin-left: 100px;
+}
+
+@keyframes fade-up{
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.social i{
+    margin-left: 10px;
+    color: white;
+}
+
+@media only screen and (max-width:480px)  {
+    .copyright{
+        display: block;
+        padding: 20px 35px;
+    }
+    .social{
+        width: 100%;
+        margin-left: 5px;
+    }
+    .copy{
+        width: 100%;
+    }
+}  
