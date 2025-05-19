@@ -1,29 +1,11 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html{
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth;
 }
 
 body{
+    margin: 0;
+    padding: 0;
     letter-spacing: .2px;
-    overflow-x: hidden;
-}
-
-img{
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.benard, .smith, .portfolio-item {
-    background-size: cover;
-    background-position: center;
 }
 
 .settings{
@@ -31,7 +13,7 @@ img{
     height: 60px;
     z-index: 10;
     top: 25%;
-    right: 0;
+    right: -200px;
     background-color: #fff;
     position: fixed;
     right: 0;
@@ -58,6 +40,35 @@ img{
     }
 }
 
+@media only screen and (max-width:480px){
+    .settings{
+        width: 60px;
+        height: 60px;
+        z-index: 10;
+        top: 25%;
+        right: -200px;
+        background-color: #fff;
+        position: fixed;
+        right: 0;
+        padding: 20px 10px 11px 20px;    
+    }
+    
+    .icon{
+        top: 0;
+        right: 100%;
+    }
+    
+    .settings .fa-sharp{
+        font-size: 30px;
+        color: #000;
+    }
+    .smith{
+        background-image: url(Images/thinking.jpg);
+        background-size: cover;
+        background-position: bottom;
+    }
+}    
+
 header{
     width: 100%;
     height: 70px;
@@ -68,27 +79,68 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
 }
 
 .logo img{
     width: 70px;
     height: 20px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav{
-    display: flex;
-    margin-left: auto;
+    margin-left: 470px;
 }
 
 .nav li{
     list-style: none;
+    display: none;
     margin-left: 30px;
+    animation-name: pad;
+    animation-duration: 2s;
+    animation-delay: 0.4s;
+}
+
+@keyframes pad{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .nav li a{
@@ -102,41 +154,17 @@ header{
     color: rgb(255, 69, 34);
 }
 
-/* Mobile Navigation */ 
-@media only screen and (max-width: 992px) {
-    header {
-        padding: 20px 30px;
-    }
-    
-    .nav {
-        position: fixed;
-        top: 70px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 70px);
-        background-color: rgb(48, 49, 52);
-        flex-direction: column;
+@media only screen and (max-width:480px){
+    header{
+        padding: 20px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         align-items: center;
-        padding: 40px 0;
-        transition: all 0.3s ease;
-        margin-left: 0;
     }
-    
-    .nav.active {
-        left: 0;
-    }
-    
-    .nav li {
-        margin: 15px 0;
-    }
-    
-    .hamburger {
-        display: block;
-        z-index: 1001;
-    }
-    
-    .settings {
-        display: block;
+
+    header .nav{
+        display: none;
     }
 }
 
@@ -144,28 +172,15 @@ header{
     width: 100%;
     height: auto;
     background-color: rgb(48, 49, 52);
-    padding: 100px 20px;
+    padding: 130px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .hero{
     width: 45%;
     height: auto;
-}
-
-/* .description, .hero {
-    width: 100%;
-    margin-bottom: 50px;
-} */
-
-@media only screen and (min-width: 768px) {
-    .description, .hero {
-        width: 45%;
-        margin-bottom: 0;
-    }
 }
 
 .benard{
@@ -293,9 +308,46 @@ a .down{
     }
 }
 
+@media only screen and (max-width:480px){
+    .home{
+        padding: 140px 25px 50px 30px;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    .down{
+        visibility: hidden;
+    }
+    .hero{
+        width: 100%;
+    }
+
+    .home .main-title h3{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .description{
+        width: 100%;
+    }
+    .benard{
+        width: 100%;
+        height: 600px;
+        visibility: visible;
+        transform: rotate(0deg);
+        background-image: url(Images/thinking.jpg);
+        background-position: center;
+        background-size: cover;
+        position: static;
+    }
+    .smith{
+        display: none;
+        transform: rotate(0deg);
+    }
+}
+
 .portfolio{
     width: 100%;
-    height: auto;
+    height: 1200px;
     background-color: rgb(73, 75, 80);
     padding: 130px;
 }
@@ -322,8 +374,10 @@ a .down{
 }
 
 .galleries{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
     animation-name: pad;
     animation-duration: 2s;
     animation-delay: 0.4s;
@@ -529,8 +583,63 @@ a .down{
     transform: rotate(90deg)
 }
 
+@media only screen and (max-width:480px){
+    .portfolio{
+        padding: 100px 50px;
+        height: auto;
+    }
+    .galleries{
+        width:500px;
+        height: auto;
+    }
+
+    .sway{
+        display: flex;
+        width: 100%;
+    }
+    .sways{
+        width: 100%;
+    }
+    .magic{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .green{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .dandora{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .grasia{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .mercury{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+    .santa{
+        width: 80%;
+        height: 470px;
+        margin-left: 0;
+        right: 10px;
+    }
+}
+
 .skills{
-    height: auto;
+    height: 800px;
     width: 100%;
     background-color: black;
     background-image: url(Images/white-texture.png);
@@ -540,9 +649,10 @@ a .down{
     padding: 130px;
 }
 
-.skilled, .potrait{
-    width: 100%;
-    margin-bottom: 50px;
+.skilled{
+    width: 50%;
+    height: 400px;
+    margin-bottom: 100px;
 }
 
 .skills .main-title span{
@@ -583,18 +693,6 @@ a .down{
     100% {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    .skilled {
-        width: 50%;
-        margin-right: 80px;
-    }
-    
-    .potrait {
-        width: calc(50% - 80px);
-        margin-bottom: 0;
     }
 }
 
@@ -678,6 +776,23 @@ a .down{
     padding-left: 30px;
 }
 
+@media only screen and (max-width:480px){
+    .skills{
+        padding: 100px 20px 100px 30px;
+        height: auto;
+        width: 100%;
+    }
+    .skilled{
+        width: 100%;
+    }
+    .potrait{
+        visibility: hidden;
+    }
+    .progress{
+        width: 400px;
+    }
+}
+
 .timeline{
     height: auto;
     width: 100%;
@@ -712,15 +827,6 @@ a .down{
     font-size: 18px;
     font-family: 'Mulish', sans-serif;
     display: flex;
-}
-
-@media only screen and (max-width:768px){
-    .sub{
-        flex-direction: row;
-    }
-    .tubs, .tub{
-        width: 35%;
-    }
 }
 
 .one{
@@ -845,6 +951,30 @@ a .down{
     }
 }
 
+@media only screen and (max-width:480px){
+    .timeline{
+        padding: 100px 50px;
+        height: auto;
+    }
+    .sub{
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+    .tubs{
+        width: 100%;
+    }
+    
+    .tub{
+        width: 100%;  
+    }
+    .line{
+        width: 400px;
+        height: 1px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+}
+
 .pricing{
     height: auto;
     width: 100%;
@@ -876,9 +1006,16 @@ a .down{
     line-height: 1.5; 
 }
 
-.prices, .faith{
-    width: 100%;
-    margin-bottom: 50px;
+.prices{
+    width: 45%;
+    height: auto;
+    margin-right: 80px;
+}
+
+.faith{
+    width: 45%;
+    height: auto;
+    margin-left: 150px;
 }
 
 .faith span, h3{
@@ -942,15 +1079,27 @@ a .down{
     background-color: rgb(255, 69, 34);
 }
 
-@media only screen and (min-width: 768px) {
-    .prices {
-        width: 45%;
-        margin-right: 80px;
-        margin-bottom: 0;
+@media only screen and (max-width:480px){
+    .pricing{
+        width: 100%;
+        display: block;
+        padding: 100px 20px 100px 30px;
     }
-    
-    .faith {
-        width: calc(55% - 80px);
+    .prices{
+        width: 100%;
+    }
+
+    .prices .text{
+        margin-bottom: 50px;
+    }
+
+    .faith{
+        width: 100%;
+        margin-left: 5px;
+        margin-right: 30px;
+    }
+    .fled{
+        width: 95%;
     }
 }
 
@@ -983,9 +1132,12 @@ a .down{
 }
 
 .grids{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-    gap: 30px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
 }
 
 .write{
@@ -1139,6 +1291,52 @@ a .down{
     padding: 220px 20px 20px 20px;
 }
 
+@media only screen and (max-width:480px){
+    .news{
+        padding: 100px 50px;
+    }
+    .write{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .seo{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .bulb{
+        width: 100%;
+        height: 470px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        right: 5px;
+    }
+    .draw{
+        width: 100%;
+        height: 470px;
+        margin-top: 0;
+        margin-right: 5px;
+    }
+    .way{
+        display: flex;
+        width: 100%;
+    }
+    .ways{
+        width: 100%;
+    }
+    .wayd{
+        width: 100%;
+    }
+    .grids .overlay .text{
+        padding: 345px 20px 20px 20px;
+    }
+}
+
 .contact{
     height: auto;
     width: 100%;
@@ -1187,9 +1385,9 @@ a .down{
     display: flex;
 }
 
-.hold, .fade {
+.hold{
     width: 100%;
-    margin-bottom: 50px;
+    height: auto;
 }
 
 .text p{
@@ -1217,6 +1415,11 @@ a .down{
 
 .short .fa-solid, .fa-regular{
     color: rgb(255, 69, 34);
+}
+
+.fade{
+    width: 700px;
+    height: auto;
 }
 
 .field input{
@@ -1255,34 +1458,38 @@ button i:hover{
     font-weight: bold;
 }
 
-@media only screen and (min-width: 768px) {
-    .hold {
-        width: 40%;
-        margin-right: 5%;
-        margin-bottom: 0;
+@media only screen and (max-width:480px){
+    .contact{
+        padding: 100px 20px 100px 30px;
+        width: 100%;
     }
-    
-    .fade {
-        width: 55%;
+    .help{
+        display: block;
+    }
+    .fade{
+        width: 100%;
+        margin-top: 60px;
     }
 }
 
-.copyright {
+.copyright{
     height: auto;
     width: 100%;
     background-color: black;
     padding: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy{
+    width: 45%;
+    height: auto;
     text-align: center;
+    animation-name: fade-up;
+    animation-duration: 0.7s;
+    margin-right: 50px;
 }
-
-.copy, .social {
-    width: 100%;
-    margin: 10px 0;
-}
-
 
 @keyframes fade-up{
     0%{
@@ -1305,6 +1512,15 @@ button i:hover{
     color: #fff;
 }
 
+.social{
+    width: 45%;
+    height: auto;
+    text-align: center;
+    animation-name: fade-up;
+    animation-duration: 0.7s;
+    margin-left: 100px;
+}
+
 @keyframes fade-up{
     0%{
         opacity: 0;
@@ -1321,166 +1537,16 @@ button i:hover{
     color: white;
 }
 
-@media only screen and (min-width: 768px) {
-    .copyright {
-        justify-content: space-between;
-        text-align: left;
-    }
-    
-    .copy {
-        width: auto;
-        margin-right: 50px;
-    }
-    
-    .social {
-        width: auto;
-        margin-left: 50px;
-    }
-}
-
-/* General Padding Adjustments for Mobile */
-@media only screen and (max-width: 768px) {
-    .home, .portfolio, .skills, 
-    .timeline, .pricing, .news, 
-    .contact {
-        padding: 100px 30px;
-    }
-}
-
-/* Font Size Adjustments for Mobile */
-@media only screen and (max-width: 480px) {
-    html {
-        font-size: 14px;
-    }
-    
-    .home .main-title h3 {
-        font-size: 28px;
-    }
-    
-    .portfolio .main-title h3,
-    .skills .main-title h3,
-    .timeline .main-title h3,
-    .pricing .main-title h3,
-    .news .main-title h3,
-    .contact .main-title h3 {
-        font-size: 24px;
-    }
-}
-
-/* Desktop Styles */
-@media (min-width: 992px) {
-    .home {
-        height: 100vh;
-        padding: 0;
-        display: flex;
-        align-items: center;
-    }
-    
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .description {
-        width: 45%;
-        padding-right: 5%;
-    }
-    
-    .hero {
-        width: 50%;
-        position: relative;
-    }
-    
-    .logo img {
-        width: 120px;
-        margin-bottom: 30px;
-    }
-    
-    .main-title span {
-        font-size: 1.2rem;
-        color: #FF4522;
+@media only screen and (max-width:480px)  {
+    .copyright{
         display: block;
-        margin-bottom: 10px;
+        padding: 20px 35px;
     }
-    
-    .main-title h1 {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        margin-bottom: 40px;
-        color: white;
-    }
-    
-    .service-item {
-        margin-bottom: 20px;
-    }
-    
-    .service-item a {
-        color: white;
-        font-size: 1.2rem;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        transition: all 0.3s ease;
-    }
-    
-    .service-item a:hover {
-        color: #FF4522;
-    }
-    
-    .service-item i {
-        margin-left: 10px;
-        transition: transform 0.3s ease;
-    }
-    
-    .service-item a:hover i {
-        transform: translateX(5px);
-    }
-    
-    .achievements {
-        display: flex;
-        margin-top: 60px;
-    }
-    
-    .achievement-item {
-        margin-right: 40px;
-    }
-    
-    .achievement-item h2 {
-        font-size: 3rem;
-        color: white;
-        margin-bottom: 5px;
-    }
-    
-    .achievement-item span {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-    }
-    
-    /* Hero image styling */
-    .hero-image {
+    .social{
         width: 100%;
-        height: 600px;
-        background-color: #FF4522;
-        border-radius: 20px;
-        position: relative;
-        transform: rotate(-5deg);
+        margin-left: 5px;
     }
-    
-    .hero-image::after {
-        content: '';
-        position: absolute;
+    .copy{
         width: 100%;
-        height: 100%;
-        background-image: url('images/benard-smith.jpg');
-        background-size: cover;
-        background-position: center;
-        border-radius: 20px;
-        left: 50px;
-        top: -50px;
-        transform: rotate(10deg);
     }
-}
+}  
