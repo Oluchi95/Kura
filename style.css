@@ -1,10 +1,10 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body{
-    margin: 0;
-    padding: 0;
     letter-spacing: .2px;
 }
 
@@ -40,35 +40,6 @@ body{
     }
 }
 
-@media only screen and (max-width:480px){
-    .settings{
-        width: 60px;
-        height: 60px;
-        z-index: 10;
-        top: 25%;
-        right: -200px;
-        background-color: #fff;
-        position: fixed;
-        right: 0;
-        padding: 20px 10px 11px 20px;    
-    }
-    
-    .icon{
-        top: 0;
-        right: 100%;
-    }
-    
-    .settings .fa-sharp{
-        font-size: 30px;
-        color: #000;
-    }
-    .smith{
-        background-image: url(Images/thinking.jpg);
-        background-size: cover;
-        background-position: bottom;
-    }
-}    
-
 header{
     width: 100%;
     height: 70px;
@@ -84,63 +55,22 @@ header{
 .logo img{
     width: 70px;
     height: 20px;
-    animation-name: pad;
-    animation-duration: 2s;
-    animation-delay: 0.4s;
-}
-
-@keyframes pad{
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .hamburger {
     height: 30px;
     width: 30px;
-    animation-name: pad;
-    animation-duration: 2s;
-    animation-delay: 0.4s;
-}
-
-@keyframes pad{
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    display: none;
 }
 
 .nav{
-    margin-left: 470px;
+    display: flex;
+    margin-left: auto;
 }
 
 .nav li{
     list-style: none;
-    display: none;
     margin-left: 30px;
-    animation-name: pad;
-    animation-duration: 2s;
-    animation-delay: 0.4s;
-}
-
-@keyframes pad{
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .nav li a{
@@ -152,20 +82,6 @@ header{
 
 .nav li a:hover{
     color: rgb(255, 69, 34);
-}
-
-@media only screen and (max-width:480px){
-    header{
-        padding: 20px ;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    header .nav{
-        display: none;
-    }
 }
 
 .home{
@@ -305,43 +221,6 @@ a .down{
     }
     30% {
         transform: translateY(20px);
-    }
-}
-
-@media only screen and (max-width:480px){
-    .home{
-        padding: 140px 25px 50px 30px;
-        flex-direction: column-reverse;
-        height: auto;
-    }
-    .down{
-        visibility: hidden;
-    }
-    .hero{
-        width: 100%;
-    }
-
-    .home .main-title h3{
-        width: 100%;
-        font-size: 30px;
-    }
-
-    .description{
-        width: 100%;
-    }
-    .benard{
-        width: 100%;
-        height: 600px;
-        visibility: visible;
-        transform: rotate(0deg);
-        background-image: url(Images/thinking.jpg);
-        background-position: center;
-        background-size: cover;
-        position: static;
-    }
-    .smith{
-        display: none;
-        transform: rotate(0deg);
     }
 }
 
@@ -583,61 +462,6 @@ a .down{
     transform: rotate(90deg)
 }
 
-@media only screen and (max-width:480px){
-    .portfolio{
-        padding: 100px 50px;
-        height: auto;
-    }
-    .galleries{
-        width:500px;
-        height: auto;
-    }
-
-    .sway{
-        display: flex;
-        width: 100%;
-    }
-    .sways{
-        width: 100%;
-    }
-    .magic{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-    .green{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-    .dandora{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-    .grasia{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-    .mercury{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-    .santa{
-        width: 80%;
-        height: 470px;
-        margin-left: 0;
-        right: 10px;
-    }
-}
-
 .skills{
     height: 800px;
     width: 100%;
@@ -774,23 +598,6 @@ a .down{
     background-size: contain;
     background-attachment: fixed;
     padding-left: 30px;
-}
-
-@media only screen and (max-width:480px){
-    .skills{
-        padding: 100px 20px 100px 30px;
-        height: auto;
-        width: 100%;
-    }
-    .skilled{
-        width: 100%;
-    }
-    .potrait{
-        visibility: hidden;
-    }
-    .progress{
-        width: 400px;
-    }
 }
 
 .timeline{
@@ -951,30 +758,6 @@ a .down{
     }
 }
 
-@media only screen and (max-width:480px){
-    .timeline{
-        padding: 100px 50px;
-        height: auto;
-    }
-    .sub{
-        display: inline-block;
-        margin-bottom: 15px;
-    }
-    .tubs{
-        width: 100%;
-    }
-    
-    .tub{
-        width: 100%;  
-    }
-    .line{
-        width: 400px;
-        height: 1px;
-        margin-top: 30px;
-        margin-bottom: 5px;
-    }
-}
-
 .pricing{
     height: auto;
     width: 100%;
@@ -1077,30 +860,6 @@ a .down{
 
 .fled:hover{
     background-color: rgb(255, 69, 34);
-}
-
-@media only screen and (max-width:480px){
-    .pricing{
-        width: 100%;
-        display: block;
-        padding: 100px 20px 100px 30px;
-    }
-    .prices{
-        width: 100%;
-    }
-
-    .prices .text{
-        margin-bottom: 50px;
-    }
-
-    .faith{
-        width: 100%;
-        margin-left: 5px;
-        margin-right: 30px;
-    }
-    .fled{
-        width: 95%;
-    }
 }
 
 .news{
@@ -1291,52 +1050,6 @@ a .down{
     padding: 220px 20px 20px 20px;
 }
 
-@media only screen and (max-width:480px){
-    .news{
-        padding: 100px 50px;
-    }
-    .write{
-        width: 100%;
-        height: 470px;
-        margin-left: 0;
-        margin-bottom: 30px;
-        right: 5px;
-    }
-    .seo{
-        width: 100%;
-        height: 470px;
-        margin-left: 0;
-        margin-bottom: 30px;
-        right: 5px;
-    }
-    .bulb{
-        width: 100%;
-        height: 470px;
-        margin-left: 0;
-        margin-bottom: 30px;
-        right: 5px;
-    }
-    .draw{
-        width: 100%;
-        height: 470px;
-        margin-top: 0;
-        margin-right: 5px;
-    }
-    .way{
-        display: flex;
-        width: 100%;
-    }
-    .ways{
-        width: 100%;
-    }
-    .wayd{
-        width: 100%;
-    }
-    .grids .overlay .text{
-        padding: 345px 20px 20px 20px;
-    }
-}
-
 .contact{
     height: auto;
     width: 100%;
@@ -1458,20 +1171,6 @@ button i:hover{
     font-weight: bold;
 }
 
-@media only screen and (max-width:480px){
-    .contact{
-        padding: 100px 20px 100px 30px;
-        width: 100%;
-    }
-    .help{
-        display: block;
-    }
-    .fade{
-        width: 100%;
-        margin-top: 60px;
-    }
-}
-
 .copyright{
     height: auto;
     width: 100%;
@@ -1536,17 +1235,3 @@ button i:hover{
     margin-left: 10px;
     color: white;
 }
-
-@media only screen and (max-width:480px)  {
-    .copyright{
-        display: block;
-        padding: 20px 35px;
-    }
-    .social{
-        width: 100%;
-        margin-left: 5px;
-    }
-    .copy{
-        width: 100%;
-    }
-}  
