@@ -128,7 +128,7 @@ header{
     position: absolute;
     border-radius: 10px;
     margin-left: 100px;
-    background-image: url(Images/thinking.jpg);
+    background-image: url(images/thinking.jpg);
     background-size: cover;
     background-position: bottom;
     transform: rotate(15deg);
@@ -290,7 +290,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 1.jpg);
+    background-image: url(images/portfolio\ 1.jpg);
     background-position: center;
     background-size: cover ;
     position: relative;
@@ -302,7 +302,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 2.jpg);
+    background-image: url(images/portfolio\ 2.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -314,7 +314,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 3.jpg);
+    background-image: url(images/portfolio\ 3.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -326,7 +326,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 4.jpg);
+    background-image: url(images/portfolio\ 4.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -338,7 +338,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 5.jpg);
+    background-image: url(images/portfolio\ 5.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -350,7 +350,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/portfolio\ 6.jpg);
+    background-image: url(images/portfolio\ 6.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -478,7 +478,7 @@ a .down{
     height: 800px;
     width: 100%;
     background-color: black;
-    background-image: url(Images/white-texture.png);
+    background-image: url(images/white-texture.png);
     background-position: center;
     background-repeat: repeat;
     display: flex;
@@ -605,7 +605,7 @@ a .down{
 .potray{
     width: 420px;
     height: 824px;
-    background-image: url(Images/portfolio\ 2.jpg);
+    background-image: url(images/portfolio\ 2.jpg);
     background-position: center;
     background-size: contain;
     background-attachment: fixed;
@@ -916,7 +916,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/Book.jpg);
+    background-image: url(images/Book.jpg);
     background-position: center;
     background-size: cover;
     position: relative;                             
@@ -927,7 +927,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/SEO.jpg);
+    background-image: url(images/SEO.jpg);
     background-position: center;
     background-size: cover;
     position: relative;  
@@ -938,7 +938,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/3.jpg);
+    background-image: url(images/3.jpg);
     background-position: center;
     background-size: cover;
     position: relative;  
@@ -949,7 +949,7 @@ a .down{
     height: 360px;
     border-radius: 10px;
     border: none;
-    background-image: url(Images/Drawing.jpg);
+    background-image: url(images/Drawing.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
