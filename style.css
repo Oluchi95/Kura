@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
 
 html {
     overflow-x: hidden;
@@ -1255,7 +1256,7 @@ button i:hover{
         padding: 20px;
     }
 
-    /* .nav {
+    .nav {
         position: fixed;
         top: 70px;
         left: 0;
@@ -1273,18 +1274,6 @@ button i:hover{
         transform: translateY(0);
         display: flex;
     }
-
-    /* Add to your mobile media query */
-    .nav.active::before {
-        content: '';
-        position: fixed;
-        top: 70px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0,0,0,0.5);
-        z-index: 999;
-    }
     
     .nav li {
         margin: 15px 0;
@@ -1294,51 +1283,6 @@ button i:hover{
         cursor: pointer;
         display: block;
         margin-left: auto;
-    } */
-    
-    /* Improved mobile nav styles */
-    .nav {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background-color: rgb(48, 49, 52);
-        padding: 20px;
-        transform: translateY(-150%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 1000;
-        display: block; /* Change from none to block */
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .nav.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav li {
-        margin: 15px 0;
-        text-align: left; /* Force left alignment */
-        padding-left: 20px; /* Add some padding */
-        border-left: 2px solid rgb(255, 69, 34); /* Visual indicator */
-    }
-    
-    .hamburger {
-        cursor: pointer;
-        display: block;
-        width: 30px;
-        height: 30px;
-        position: relative;
-        z-index: 1001;
-        transition: all 0.3s ease;
-    }
-    
-    /* X icon when active */
-    .hamburger.active {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/%3E%3C/svg%3E");
-        background-size: contain;
     }
 }
 
