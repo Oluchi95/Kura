@@ -1452,13 +1452,13 @@ button i:hover{
 
     .tubs, .tub {
         width: 100%;
+        font-size: medium;
         white-space: normal;
         margin-right: 0;
     }
 
     .tub {
         font-weight: bold;
-        font-size: small;
         margin: 5px 0 !important;
     }
 
