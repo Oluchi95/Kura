@@ -1248,190 +1248,240 @@ button i:hover{
     color: white;
 }
 
-@media screen and (max-width: 768px){
-    header{
+/* ==================== */
+/* Mobile Menu - All Breakpoints */
+/* ==================== */
+@media screen and (max-width: 1024px) {
+    header {
         padding: 20px;
     }
 
-    .nav{
-        display: none;
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(48, 49, 52);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        display: none; /* Start hidden */
     }
-
-    .hamburger{
+    
+    .nav.active {
+        transform: translateY(0);
+        display: flex;
+    }
+    
+    .nav li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        cursor: pointer;
         display: block;
         margin-left: auto;
     }
+}
 
-    .home{
+/* ==================== */
+/* Tablet (768px) - Main Responsive Styles */
+/* ==================== */
+@media screen and (max-width: 768px) {
+    /* Global Styles */
+    body {
+        font-size: 14px;
+    }
+    
+    .home, .portfolio, .skills, .timeline, .pricing, .news, .contact {
+        padding: 100px 20px;
+    }
+    
+    /* Home Section */
+    .home {
         flex-direction: column;
         align-items: center;
-        padding: 130px 20px;
     }
 
-    .hero{
+    .hero, .description {
         width: 100%;
         height: auto;
     }
 
-    .description{
-        width: 100%;
-        height: auto;
+    .benard {
+        width: 80%;
+        min-height: 300px;
+    }
+    
+    .smith {
+        min-height: 300px;
     }
 
-    .achievements ul li h3{
-        font-size: 30px;
+    .main-title h3 {
+        font-size: 24px;
     }
-
-    .achievements ul li span{
-        font-size: 14px;
-    }
-
-    .achievements ul li{
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .achievements ul li h3{
-        font-size: 30px;
-    }
-
-    .achievements ul li span{
-        font-size: 14px;
-    }
-
-    .home .main-title h3{
+    
+    .home .main-title h3 {
         font-size: 25px;
     }
-
-    .home .main-title span{
+    
+    .home .main-title span {
         font-size: 15px;
     }
 
-    .services a:hover{
-        color: rgb(255, 69, 34);
+    /* Achievements */
+    .achievements ul {
+        flex-direction: column;
     }
-
-    .services .inner-list a{
-        font-family: 'Poppins', sans-serif;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .services .inner-list{
-        margin-bottom: 15px;
-    }
-
-    .services a:hover{
-        color: rgb(255, 69, 34);
-    }
-
-    .arrow{
-        fill: currentColor;
-        height: 17px;
-        width: 17px;
-        color: #fff;
-        margin-left: 10px;
-        transition: all .3s ease;
-    }
-
-    .services .inner-list a{
-        font-family: 'Poppins', sans-serif;
-        color: #fff;
-        text-decoration: none;
-    }
-
-    .services .inner-list{
-        margin-bottom: 15px;
-    }
-
-    .services a:hover{
-        color: rgb(255, 69, 34);
-    }
-
-    .arrow{
-        fill: currentColor;
-        height: 17px;
-        width: 17px;
-        color: #fff;
-        margin-left: 10px;
-        transition: all .3s ease;
-    }
-
-    .achievements ul li h3{
-        font-size: 30px;
-    }
-
-    .achievements ul li span{
-        font-size: 14px;
-    }
-
-    .achievements ul li{
+    
+    .achievements ul li {
         flex-direction: column;
         align-items: center;
         margin-bottom: 20px;
     }
-}
-
-@media screen and (max-width: 480px){
-    header{
-        padding: 20px;
-    }
-
-    .nav{
-        display: none;
-    }
-
-    .hamburger{
-        display: block;
-        margin-left: auto;
-    }
-
-    .home{
-        flex-direction: column;
-        align-items: center;
-        padding: 130px 20px;
-    }
-
-    .hero{
-        width: 100%;
-        height: auto;
-    }
-
-    .description{
-        width: 100%;
-        height: auto;
+    
+    .achievements ul li h3 {
+        font-size: 30px;
     }
     
-}
-
-@media screen and (max-width: 1024px){
-    header{
-        padding: 20px;
+    .achievements ul li span {
+        font-size: 14px;
     }
 
-    .nav{
-        display: none;
+    /* Services */
+    .services .inner-list {
+        margin-bottom: 15px;
+    }
+    
+    .services .inner-list a {
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .services a:hover {
+        color: rgb(255, 69, 34);
+    }
+    
+    .arrow {
+        fill: currentColor;
+        height: 17px;
+        width: 17px;
+        color: #fff;
+        margin-left: 10px;
+        transition: all .3s ease;
     }
 
-    .hamburger{
-        display: block;
-        margin-left: auto;
-    }
-
-    .home{
+    /* Portfolio */
+    .galleries {
         flex-direction: column;
         align-items: center;
-        padding: 130px 20px;
     }
-
-    .hero{
+    
+    .magic, .green, .dandora, .grasia, .mercury, .santa {
         width: 100%;
-        height: auto;
+        margin: 10px 0;
     }
-
-    .description{
+    
+    /* Skills */
+    .skills {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+    
+    .skilled, .potrait {
         width: 100%;
-        height: auto;
+        margin: 0;
+    }
+    
+    .potray {
+        width: 100%;
+        height: 400px;
+        margin-top: 30px;
+    }
+    
+    .progress {
+        width: 100%;
+    }
+    
+    /* Timeline */
+    .subtitles {
+        padding: 0 20px;
+    }
+    
+    .tubs, .tub {
+        width: 100%;
+    }
+    
+    .line {
+        width: 100%;
+    }
+    
+    /* Pricing */
+    .pricing {
+        flex-direction: column;
+        padding: 80px 20px;
+    }
+    
+    .prices, .faith {
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* News */
+    .grids {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .write, .seo, .bulb, .draw {
+        width: 100%;
+        margin: 10px 0;
+    }
+    
+    .swayers, .ways, .sways, .wayd {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+    
+    .sways, .wayd {
+        margin-top: 20px;
+    }
+    
+    /* Contact */
+    .help {
+        flex-direction: column;
+    }
+    
+    .fade {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    /* Footer */
+    .copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .copy, .social {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* ==================== */
+/* Mobile (480px) - Smaller Adjustments */
+/* ==================== */
+@media screen and (max-width: 480px) {
+    .benard {
+        width: 100%;
+    }
+    
+    .main-title h3 {
+        font-size: 20px;
     }
 }
