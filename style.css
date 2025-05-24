@@ -1247,3 +1247,191 @@ button i:hover{
     margin-left: 10px;
     color: white;
 }
+
+@media screen and (max-width: 768px){
+    header{
+        padding: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+    }
+
+    .home{
+        flex-direction: column;
+        align-items: center;
+        padding: 130px 20px;
+    }
+
+    .hero{
+        width: 100%;
+        height: auto;
+    }
+
+    .description{
+        width: 100%;
+        height: auto;
+    }
+
+    .achievements ul li h3{
+        font-size: 30px;
+    }
+
+    .achievements ul li span{
+        font-size: 14px;
+    }
+
+    .achievements ul li{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .achievements ul li h3{
+        font-size: 30px;
+    }
+
+    .achievements ul li span{
+        font-size: 14px;
+    }
+
+    .home .main-title h3{
+        font-size: 25px;
+    }
+
+    .home .main-title span{
+        font-size: 15px;
+    }
+
+    .services a:hover{
+        color: rgb(255, 69, 34);
+    }
+
+    .services .inner-list a{
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .services .inner-list{
+        margin-bottom: 15px;
+    }
+
+    .services a:hover{
+        color: rgb(255, 69, 34);
+    }
+
+    .arrow{
+        fill: currentColor;
+        height: 17px;
+        width: 17px;
+        color: #fff;
+        margin-left: 10px;
+        transition: all .3s ease;
+    }
+
+    .services .inner-list a{
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .services .inner-list{
+        margin-bottom: 15px;
+    }
+
+    .services a:hover{
+        color: rgb(255, 69, 34);
+    }
+
+    .arrow{
+        fill: currentColor;
+        height: 17px;
+        width: 17px;
+        color: #fff;
+        margin-left: 10px;
+        transition: all .3s ease;
+    }
+
+    .achievements ul li h3{
+        font-size: 30px;
+    }
+
+    .achievements ul li span{
+        font-size: 14px;
+    }
+
+    .achievements ul li{
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    header{
+        padding: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+    }
+
+    .home{
+        flex-direction: column;
+        align-items: center;
+        padding: 130px 20px;
+    }
+
+    .hero{
+        width: 100%;
+        height: auto;
+    }
+
+    .description{
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    header{
+        padding: 20px;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        margin-left: auto;
+    }
+
+    .home{
+        flex-direction: column;
+        align-items: center;
+        padding: 130px 20px;
+    }
+
+    .hero{
+        width: 100%;
+        height: auto;
+    }
+
+    .description{
+        width: 100%;
+        height: auto;
+    }
+}
