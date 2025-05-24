@@ -1311,13 +1311,28 @@ button i:hover{
     }
 
     .benard {
+        display: none;
+    }
+    
+    .smith {
+        display: block;
+        width: 100%;
+        height: 400px;
+        transform: none;
+        margin: 0;
+        position: relative;
+        background-size: cover;
+        background-position: center top;
+    }
+
+    /* .benard {
         width: 50%;
         min-height: 450px;
     }
     
     .smith {
         min-height: 450px;
-    }
+    } */
 
     .main-title h3 {
         font-size: 24px;
@@ -1333,13 +1348,18 @@ button i:hover{
 
     /* Achievements */
     .achievements ul {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 15px;
     }
-    
+
     .achievements ul li {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
+        flex: 1;
+        min-width: 120px;
+        margin: 0 !important;
+        text-align: center;
     }
     
     .achievements ul li h3 {
@@ -1375,7 +1395,7 @@ button i:hover{
     }
 
     /* Portfolio */
-    .galleries {
+    /* .galleries {
         flex-direction: column;
         align-items: center;
     }
@@ -1383,6 +1403,26 @@ button i:hover{
     .magic, .green, .dandora, .grasia, .mercury, .santa {
         width: 100%;
         margin: 10px 0;
+    } */
+
+    .galleries {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column by default */
+        gap: 20px;
+    }
+
+    /* Show all portfolio items */
+    .magic, .green, .dandora, 
+    .grasia, .mercury, .santa {
+        width: 100%;
+        height: 300px; /* Consistent height */
+        margin: 0; /* Remove individual margins */
+        display: block !important; /* Force show all items */
+    }
+
+    /* Adjust overlay positioning */
+    .galleries .overlay .text {
+        padding: 250px 20px 20px 20px; /* Better mobile positioning */
     }
     
     /* Skills */
@@ -1408,6 +1448,32 @@ button i:hover{
     
     /* Timeline */
     .subtitles {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .tubs, .tub {
+        width: 100%;
+        white-space: normal;
+        margin-right: 0;
+    }
+
+    .tub {
+        font-weight: bold;
+        margin: 5px 0 !important;
+    }
+
+    .line {
+        width: 100%;
+        margin: 10px 0;
+    }
+    /* .subtitles {
         padding: 0 20px;
     }
     
@@ -1416,8 +1482,7 @@ button i:hover{
     }
     
     .line {
-        width: 100%;
-    }
+        width: 100%; */
     
     /* Pricing */
     .pricing {
@@ -1483,5 +1548,13 @@ button i:hover{
     
     .main-title h3 {
         font-size: 20px;
+    }
+}
+
+
+/* For slightly larger mobile screens (like tablets) */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .galleries {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
     }
 }
